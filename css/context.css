@@ -1,0 +1,552 @@
+/*** CSS FOR CONTEXT PAGE ***/
+/* Ensure full page expansion */
+html, body {
+    min-height: 100vh; /* Ensure body is at least the height of the viewport */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensures body takes up full width */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Degular, sans-serif;
+    line-height: 1.6;
+    background-size: cover;
+    color: #333;
+    padding: 0;
+    min-height: 100vh;
+    display: flex; /* Use flexbox to ensure the content expands properly */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+h2 {
+    padding-bottom: 10px;
+}
+
+h2 a {
+    text-decoration: none;
+}
+
+h2 a:visited{
+     color: black;
+}
+
+a {
+    background: linear-gradient(currentColor 0 0) 
+        bottom left/
+        var(--underline-width, 0%) 0.12em
+        no-repeat;
+    transition: background-size 0.5s;
+}
+
+a:hover { 
+    --underline-width: 100%;
+}
+
+a:visited{
+    color: black;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 1em;
+    margin: 0;
+    width: 100%;
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between title and nav */
+    align-items: flex-end; /* Align items to the bottom */
+    position: relative; /* Establishes positioning context for absolute elements */
+    
+    border-bottom: 1px solid black;
+}
+
+/* Stacked title-name */
+.title-name {
+    color: black;
+    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column; /* Stack first and last name */
+    line-height: 1.2; /* Adjust line height between first and last name */
+}
+
+.title-name a {
+    text-decoration: none;
+    transition: none;
+}
+
+.title-name a:hover {
+    text-decoration: none;
+    transition: none;
+    --underline-width: 0;
+}
+
+.title-name a:visited {
+    text-decoration: none;
+    transition: none;
+    --underline-width: 0;
+    color: black;
+}
+
+.bar {
+    position: flex;
+    width: 100%;
+    height: 5px;
+
+    background-color: black;
+    bottom: 0;
+    top: 10px;
+}
+
+
+/* Navigation Menu (Desktop) */
+#nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#nav-list li {
+    margin: 0 15px;
+}
+
+#nav-list li a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #f5f5f5;
+    text-decoration: none;
+    background-color: transparent;
+    background: linear-gradient(to top, black 100%, transparent 0%);
+    background-size: 100% 0%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+}
+
+#nav-list li a:hover,
+#nav-list li a.active {
+    color: white; /* Change text color */
+    background-size: 100% 100%; /* Grow background from bottom to top */
+}
+
+.navigation{
+    background-color: transparent;
+    position: relative;
+    top: 16px;
+}
+
+
+/* Context Menu (Desktop) */
+.tab-master{
+    grid-area: 1 / 1 / 1 / 4;
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    border-bottom: 1px solid black;
+}
+
+#tab-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#tab-list li {
+    margin: 0 15px;
+}
+
+#tab-list li a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #f5f5f5;
+    text-decoration: none;
+    background-color: transparent;
+    background: linear-gradient(to top, black 100%, transparent 0%);
+    background-size: 100% 0%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+}
+
+#tab-list li a:hover,
+#tab-list li a.active {
+    color: white; /* Change text color */
+    background-size: 100% 100%; /* Grow background from bottom to top */
+}
+
+.tab-content {
+    grid-area: 2 / 1 / 4 / 4;
+    position: relative;
+    background-color: white;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    
+    max-height: calc(100vh - 315px); /* Adjust this value based on your layout */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px; /* Optional padding for better spacing */
+}
+
+.tab-body-01, .tab-body-02 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    grid-template-rows: 1fr 100px;
+    grid-column-gap: 20px;
+    grid-row-gap: 0;
+}
+
+.tab-body-01 {
+    background-color: white;
+    padding: 20px;
+}
+
+.tab-body-02 {
+    background-color: white;
+    padding: 20px;
+}
+
+.tab-text {
+    grid-area: 1 / 1 / 4 / 2;
+    background-color: white;
+}
+
+.tab-text b {
+    line-height: normal;
+    padding: 10px 0;
+}
+
+.tab-text p {
+    line-height: normal;
+    padding: 5px 0;
+}
+
+.tab-gallery {
+    grid-area: 1 / 2 / 4 / 3;
+    background-color: white;
+    position: absolute;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This ensures the images are centered horizontally */
+    justify-content: flex-start; /* Ensures the images are stacked from top to bottom */
+}
+
+.tab-image {
+    padding: 10px 0;
+}
+
+.tab-image img {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+
+
+/*** Main content ***/
+main {
+    height: calc(100vh - 150px); /* Adjust 100px based on the height of your header/footer */
+    overflow: hidden; /* This will handle any overflowing content */
+}
+
+.semi-circle {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 200px;
+    border-radius: 150px 150px 0 0;
+    background-color: green;
+}
+
+.content {
+    margin: 1em;
+    padding-top: 20px;
+    
+}
+
+.parent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0;
+    height: calc(100vh - 200px);
+    
+    flex-grow: 1; /* Allows the grid to grow and fill available space */
+}
+
+.spacer {
+    height: 50px;
+    width: 100%; /* Ensures it stretches across the full width */
+    background-color: transparent; 
+}
+
+
+
+
+/* Dropdown Menu*/
+.dropdown-toggle {
+    font-family: Degular;
+    font-weight: 700;
+    cursor: pointer;
+    width: fit-content;
+    height: auto;
+    color: #f5f5f5;
+    transition: color 0.3s ease; /* Smooth color transition */
+    position: relative;
+    
+    padding-right: 25px;
+}
+
+.dropdown-toggle:hover{
+    color: black;
+}
+
+/* Add the arrow with ::after */
+.dropdown-toggle::after {
+    content: '▼'; /* Down arrow symbol */
+    font-size: 14px; /* Adjust arrow size as needed */
+    color: transparent; /* Hidden by default */
+    position: absolute;
+    right: 0; /* Position it to the right of the text */
+    top: 40%; /* Vertically center the arrow */
+    transform: translateY(-50%) rotate(0deg); /* Initial state */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */}
+
+/* Fade in arrow on hover */
+.dropdown-toggle:hover::after {
+    opacity: 1;
+    color: black;
+}
+
+/* Keep the arrow visible when the dropdown is active */
+.dropdown-active::after {
+    /*content: '▲';  Up arrow symbol */
+    opacity: 1; /* Keep it visible */
+    color: black; /* Change color to black when active */
+    transform: translateY(-50%) rotate(180deg); /* Rotate the arrow up */
+    transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.dropdown-active {
+    color: black !important;
+}
+
+.dropdown-content {
+    display: none;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    pointer-events: auto;
+}
+
+.dropdown-content a {
+    /*padding-bottom: 10px;*/
+    color: black !important;
+}
+
+.dropdown-content p {
+    padding-bottom: 10px;
+}
+
+
+/* Style when dropdown is active */
+.dropdown-active .dropdown-content {
+    display: block;
+}
+
+#projects a {
+    font-family: Degular;
+    font-weight: 400;
+    color: #D0D0D0;
+}
+
+.image-frame {
+    grid-area: 1 / 2 / 4 / 4;
+    position: relative;
+    left: 15%;
+    width: 1200px;
+    height: 1000px;
+    background-color: #000; /* Fallback background color */
+    overflow-x: visible; /* Ensure content doesn't overflow */
+    z-index: 1;
+    border-radius: 50%;
+    
+    background-size: cover;  /* Makes the image fill the entire circle */
+    background-position: center;
+    /*transition: background-image 0.3s ease-in-out;   Smooth transition */
+}
+
+.image-frame:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;  /* Adjust the height (narrower tail) */
+    border-bottom: 20px solid transparent; /* Same for bottom */
+    border-right: 100px solid black;  /* Elongated tail */
+    margin-top: -20px; /* Center the tail vertically */
+    margin-left: -80px;
+    z-index: 1;
+}
+
+.image-eye {
+    position: absolute;
+    width: 95%; /* Adjust width as necessary */
+    height: 95%; /* Adjust height as necessary */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    border-radius: 50%; /* Ensure the eye is circular */
+    
+    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+    transition: transform 0.12s ease; /* Faster scaling */
+}
+
+.image-eye.visible {
+    transform: translate(-50%, -50%) scale(1); /* Scale to full size when visible */
+}
+
+
+/*.image-circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 150px; 
+    height: 150px;
+    z-index: 0;
+    display: block;
+    background-image: url("../img/studio_2020.jpg");
+}*/
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    /*border-radius: 50%; */
+    transition: none;
+}
+
+
+/* Footer */
+footer {
+    position: fixed; /* Keep the footer fixed at the bottom */
+    left: 0;         /* Align footer to the left */
+    bottom: 0;       /* Position it at the bottom of the viewport */
+    height: auto;
+    width: 100%;     /* Make the footer take up the full width */
+    text-align: left;
+    font-size: 10px;
+    color: black;
+    z-index: 1000;   /* Ensure it appears above other elements */
+    padding: 10px 0 !important;
+    border-top: 1px solid black;
+    background-color: white;
+}
+
+/* Marquee styles */
+.marquee {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+}
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    
+    animation: scroll 35s linear infinite; /* Apply the animation */
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+
+
+/*** FONTS ***/
+@font-face {
+    font-family: 'Editor';
+    src: url('../fonts/editor/Editor-Regular.otf');
+}
+
+@font-face {
+    font-family: 'EditorBold';
+    src: url('../fonts/editor/Editor-Bold.otf');
+}
+
+@font-face {
+    font-family: 'EditorBoldItalic';
+    src: url('../fonts/editor/Editor-BoldItalic.otf');
+}
+
+
+@font-face {
+    font-family: 'EditorItalic';
+    src: url('../fonts/editor/Editor-Italic.otf');
+}
+
+@font-face {
+    font-family: 'Pachinko';
+    src: url('../fonts/pachinko/PachinkoSans-Regular.otf');
+}
+
+@font-face {
+    font-family: 'PachinkoBold';
+    src: url('../fonts/pachinko/PachinkoSans-Bold.otf');
+}
+
+@font-face {
+    font-family: 'PachinkoBoldItalic';
+    src: url('../fonts/pachinko/PachinkoSans-BoldItalic.otf');
+}
+
+
+@font-face {
+    font-family: 'PachinkoItalic';
+    src: url('../fonts/pachinko/PachinkoSans-Italic.otf');
+}
+
+@font-face {
+    font-family: 'Degular';
+    src: url('../fonts/degular-variable/DegularVariable.ttf');
+}

@@ -1,0 +1,95 @@
+.swiper {
+    margin: 0 !important;
+}
+
+:root {
+    --swiper-navigation-sides-offset: 0; /* Remove offset */
+}
+
+/* Horizontal Swiper */
+.horizontal-swiper {
+    width: 750px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.horizontal-swiper .swiper-slide {
+    background-color: white;
+    position: relative;       /* Enable absolute positioning inside */
+    overflow: hidden;         /* Hide any overflow */
+}
+
+.horizontal-swiper .swiper-slide img {
+    position: absolute;       /* Use absolute positioning for centering */
+    top: 50%;                 /* Move to center vertically */
+    left: 50%;                /* Move to center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning to perfectly center */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;      /* Maintain aspect ratio */
+    cursor: crosshair;
+}
+
+
+.horizontal-swiper .swiper-button-prev,
+.horizontal-swiper .swiper-button-next {
+    color: black; 
+    height: 100%; /* Make the arrow's clickable area span the full height */
+    top: 0;       /* Align the arrow at the top */
+    bottom: 0;    /* Align the arrow at the bottom */
+    width: 50px;  /* Ensure the width adjusts properly */
+    display: flex; /* Use flexbox to center the arrow icon */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.horizontal-swiper .swiper-scrollbar {
+    display: none;
+}
+
+/* Vertical Swiper */
+.vertical-swiper {
+    width: 562.5px;
+    height: 750px;
+    border: 1px solid black;
+}
+
+.vertical-swiper .swiper-slide {
+    background-color: white;
+}
+
+.vertical-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    cursor: crosshair;
+}
+
+.vertical-swiper .swiper-button-prev,
+.vertical-swiper .swiper-button-next {
+    color: black;
+    height: 100%; /* Make the arrow's clickable area span the full height */
+    top: 0;       /* Align the arrow at the top */
+    bottom: 0;    /* Align the arrow at the bottom */
+    width: 50px;  /* Ensure the width adjusts properly */
+    display: flex; /* Use flexbox to center the arrow icon */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.vertical-swiper .swiper-scrollbar {
+    display: none;
+}
+
+.swiper-pagination-bullet-active {
+     background-color: #000 !important;
+}
+
+
+

@@ -1,0 +1,196 @@
+/* MOBILE QUERIES */
+@media (max-width: 768px) {
+    /* Hide desktop menu and show hamburger on mobile */
+    header {
+        align-items: center;
+        padding: 1em;
+    }
+    
+    /* Hamburger Menu Icon */
+    .hamburger-menu {
+        display: none; /* Show the hamburger menu */
+        position: fixed; /* Fixed position */
+        top: 40px; /* Adjust as needed for vertical alignment */
+        right: 29px; /* Adjust as needed for horizontal alignment */
+        z-index: 1000; /* Ensure it's above other content */
+        cursor: pointer;
+        background-color: transparent !important;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 25px; /* Width of the bar */
+        height: 3px; /* Height of the bar */
+        margin: 5px 0; /* Space between bars */
+        background-color: #000; /* Color of the bar */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger-menu span:nth-child(1) {
+        width: 35px; /* Longest line */
+    }
+
+    .hamburger-menu span:nth-child(2) {
+        width: 25px; /* Shorter line */
+    }
+
+    .hamburger-menu span:nth-child(3) {
+        width: 15px; /* Shortest line */
+    }
+
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+        width: 35px;
+    }
+    
+    .title-name{
+        font-size: 24px;
+    }
+    
+    #nav-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Vertically centered */
+        align-items: flex-start;
+        
+        width: 100%;
+        text-align: center;
+        margin: 0; /* Reset margin */
+        
+        padding-top: 50px;
+        padding-left: 50px;
+    }
+
+    /* Show menu when active */
+    #nav-list.active {
+        display: flex; /* Show the menu */
+    }
+
+    #nav-list li {
+        margin: 5px; /* Space between items */
+        text-align: left;
+    }
+    
+    #nav-list li a {
+        color: #D0D0D0;
+        text-decoration: none;
+        
+        font-family: Editor;
+        font-size: 28px;
+        font-weight: 400;
+        text-align: left; /* Left-align the text within the link */
+        width: 100%; /* Ensure the link takes full width for left alignment */
+    }
+    
+    #nav-list li a:hover {
+        color: white;
+        /*text-decoration: underline;*/
+    }
+    
+    .hamburger-menu {
+        display: block;
+        background-color: transparent !important;
+        z-index: 1000;
+        top: 25px;
+    }
+    
+    /* Navigation */
+    .navigation {
+        position: absolute;
+        top: 100%; /* Start just below the header */
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 900;
+        background-color: transparent;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.5) 60%,
+            rgba(255, 255, 255, 0) 100%);
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        max-height: 0; /* Initially collapsed */
+        opacity: 0; /* Initially invisible */
+        visibility: hidden; /* Hidden but takes up space */
+        transition: max-height 0.3s ease, 
+            opacity 0.3s ease, 
+            visibility 0.3s; /* Smooth transitions */
+        /*border-top: 1px black solid;*/
+    }
+    
+    .sidebar-container {
+        margin: 84px 0 0 0;
+        padding-top: 5px;
+        background-color: #0437F2;
+        border-top: 1px solid #f6f8ff;
+    }
+
+    .navigation.active {
+        max-height: calc(100vh - 100px); 
+        opacity: 1; 
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .content{
+        margin: 1em;
+        padding-top: 20px;
+    }
+    
+    .parent-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+    } 
+    
+    .image-frame {
+        position: relative;
+        width: 100%;
+        height: auto;  
+        max-height: 800px;
+        background-color: #1c1c1c; /* Fallback background color */
+        overflow: hidden; /* Ensure content doesn't overflow */
+        z-index: 1;
+    }
+    
+    .work-list a{
+        font-size: 20px;
+    }
+    
+    .dropdown-toggle {
+        font-size: 20px;
+    }
+    
+    #projects a {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Show horizontal desktop menu */
+    #nav-list {
+        display: flex;
+    }
+
+    .hero {
+        padding: 60px;
+    }
+
+    footer {
+        padding: 30px;
+    }
+}
+
