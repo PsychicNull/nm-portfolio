@@ -398,47 +398,47 @@ footer {
 /*** FONTS ***/
 @font-face {
     font-family: 'Editor';
-    src: url('../fonts/editor/Editor-Regular.otf');
+    src: url('fonts/editor/Editor-Regular.otf');
 }
 
 @font-face {
     font-family: 'EditorBold';
-    src: url('../fonts/editor/Editor-Bold.otf');
+    src: url('fonts/editor/Editor-Bold.otf');
 }
 
 @font-face {
     font-family: 'EditorBoldItalic';
-    src: url('../fonts/editor/Editor-BoldItalic.otf');
+    src: url('fonts/editor/Editor-BoldItalic.otf');
 }
 
 
 @font-face {
     font-family: 'EditorItalic';
-    src: url('../fonts/editor/Editor-Italic.otf');
+    src: url('fonts/editor/Editor-Italic.otf');
 }
 
 @font-face {
     font-family: 'Pachinko';
-    src: url('../fonts/pachinko/PachinkoSans-Regular.otf');
+    src: url('fonts/pachinko/PachinkoSans-Regular.otf');
 }
 
 @font-face {
     font-family: 'PachinkoBold';
-    src: url('../fonts/pachinko/PachinkoSans-Bold.otf');
+    src: url('fonts/pachinko/PachinkoSans-Bold.otf');
 }
 
 @font-face {
     font-family: 'PachinkoBoldItalic';
-    src: url('../fonts/pachinko/PachinkoSans-BoldItalic.otf');
+    src: url('fonts/pachinko/PachinkoSans-BoldItalic.otf');
 }
 
 
 @font-face {
     font-family: 'PachinkoItalic';
-    src: url('../fonts/pachinko/PachinkoSans-Italic.otf');
+    src: url('fonts/pachinko/PachinkoSans-Italic.otf');
 }
 
 @font-face {
     font-family: 'Degular';
-    src: url('../fonts/degular-variable/DegularVariable.ttf');
+    src: url('fonts/degular-variable/DegularVariable.ttf');
 }
