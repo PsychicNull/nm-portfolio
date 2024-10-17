@@ -2,17 +2,10 @@
 
 /* highlight-current-page.js for Nyeema Morgan */
 
-$(document).ready(function() {
+window.onload = function() {
     // Get the current URL, remove trailing slash if present
     var currentUrl = window.location.pathname.replace(/\/$/, '');
-
-    // Normalize paths for GitHub Pages (account for possible repo name in URL)
-    var repoName = '/your-repo-name';  // Replace with your actual repo name if applicable
-
-    // Remove the repo name from the current URL if it's there
-    if (currentUrl.startsWith(repoName)) {
-        currentUrl = currentUrl.replace(repoName, '');
-    }
+    console.log('Current URL:', currentUrl);  // Log current URL
 
     // Define the mapping of normalized URLs to the navigation items
     var navItems = {
@@ -23,9 +16,12 @@ $(document).ready(function() {
 
     // Function to set the active class
     window.setActiveClass = function(url) {
+        console.log('Checking URL against nav items');  // Log the check process
         for (var page in navItems) {
             var link = $(navItems[page]);
-            if (url === page || url === page.replace('.html', '')) {
+            console.log('Comparing:', url, 'with', page);  // Log comparison
+            if (url === page || url === page.replace('.html', '') || url === page.replace('.html', '/')) {
+                console.log('Match found for:', page);  // Log matched page
                 link.addClass('active'); // Highlight active link
             } else {
                 link.removeClass('active'); // Remove active class from others
@@ -39,6 +35,7 @@ $(document).ready(function() {
     // Handle click event on nav links
     $('#nav-list a').on('click', function(event) {
         var href = $(this).attr('href');
+        console.log('Clicked link:', href);  // Log clicked link
         setActiveClass(href); // Update active class on click
 
         // Optional: Add a short delay before navigation
@@ -46,7 +43,9 @@ $(document).ready(function() {
             window.location.href = href; // Navigate to the link
         }, 100); // Adjust timing as needed
     });
-});
+};
+
+
 
 
 // $(document).ready(function() {
