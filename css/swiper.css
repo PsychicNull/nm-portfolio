@@ -43,7 +43,7 @@
     display: flex; /* Use flexbox to center the arrow icon */
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    opacity: 1;
 }
 
 .horizontal-swiper .swiper-scrollbar {
@@ -80,7 +80,7 @@
     display: flex; /* Use flexbox to center the arrow icon */
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    opacity: 1;
 }
 
 .vertical-swiper .swiper-scrollbar {

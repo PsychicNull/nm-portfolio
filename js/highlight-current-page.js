@@ -6,27 +6,21 @@ $(document).ready(function() {
     // Get the current URL
     var currentUrl = window.location.pathname;
 
-    // Log the current URL for debugging
-    console.log('Current URL:', currentUrl);
-
     // Define the mapping of normalized URLs to the navigation items
     var navItems = {
         '/index.html': '#nav-list li:eq(0) a', // Works page (index.html)
         '/html/context.html': '#nav-list li:eq(1) a', // Context page
-        '/html/about.html': '#nav-list li:eq(2) a', // About page
+        // '/html/about.html': '#nav-list li:eq(2) a', // About page
     };
 
     // Function to set the active class
     window.setActiveClass = function(url) {  // Make it a global function
-        console.log('Setting active class for:', url); // Debugging line
         url = url.replace(/\/$/, ''); // Remove trailing slash if present
         for (var page in navItems) {
             var link = $(navItems[page]);
-            console.log('Comparing with:', page); // Debugging line to see what you're comparing against
             if (url === page) {
-                console.log('Highlighting:', navItems[page]); // Debugging line
                 link.addClass('active'); // Highlight active link
-                link.css('background-size', '100% 100%'); // Ensure background grows
+                // link.css('background-size', '100% 100%'); // Ensure background grows
             } else {
                 link.removeClass('active'); // Remove active class from others
             }
