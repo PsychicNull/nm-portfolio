@@ -1,10 +1,14 @@
 /*eslint-env es6*/
 
+/*eslint-env es6*/
+
 $(document).ready(function() {
     // Function to dynamically load the header
     function loadHeader() {
-        const pathToHeader = window.location.pathname === '/index.html' ? 'html/header.html' : 'header.html';
+        // Correct pathing for index.html (root) and other pages in subfolders
+        const pathToHeader = window.location.pathname === '/index.html' || window.location.pathname === '/' ? 'html/header.html' : '../html/header.html';
 
+        // Load the header dynamically
         $("#header-placeholder").load(pathToHeader, function() {
             applyCustomCursor();
             checkScreenSize();
@@ -79,7 +83,7 @@ $(document).ready(function() {
         var navItems = {
             '/index.html': '#nav-list li:eq(0) a', // Works page (index.html)
             '/html/context.html': '#nav-list li:eq(1) a', // Context page
-            // '/html/about.html': '#nav-list li:eq(2) a', // About page
+            // '/html/about.html': '#nav-list li:eq(2) a', // About page, uncomment if needed
         };
 
         for (var page in navItems) {
@@ -97,6 +101,7 @@ $(document).ready(function() {
     // Recheck screen size when the window is resized
     $(window).on('resize', checkScreenSize);
 });
+
 
 
 
