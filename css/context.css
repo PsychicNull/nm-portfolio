@@ -168,7 +168,7 @@ header {
 }
 
 #nav-list li a.active {
-    color: black; 
+    color: black !important; 
     --underline-width: 0;
     font-weight: 700;
     text-decoration: underline;
@@ -349,6 +349,20 @@ main {
     padding: 20px;
     
     flex-grow: 1; /* Allows the grid to grow and fill available space */
+}
+
+.cv a{
+    color: #adadad; 
+    --underline-width: 0;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.cv a:hover{
+    color: black; 
+    --underline-width: 0;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .spacer {
