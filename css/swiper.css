@@ -10,7 +10,7 @@
 .horizontal-swiper {
     width: 750px;
     height: 500px;
-    border: 1px solid black;
+    border: 1px solid #adadad;
 }
 
 .horizontal-swiper .swiper-slide {
@@ -54,7 +54,7 @@
 .vertical-swiper {
     width: 562.5px;
     height: 750px;
-    border: 1px solid black;
+    border: 1px solid #adadad;
 }
 
 .vertical-swiper .swiper-slide {

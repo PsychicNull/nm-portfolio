@@ -166,14 +166,14 @@ header {
 }
 
 #nav-list li a:hover {
-    color: #adadad; 
+    color: black; 
     --underline-width: 0;
     font-weight: 700;
     text-decoration: underline;
 }
 
 #nav-list li a.active {
-    color: #adadad; 
+    color: black;
     --underline-width: 0;
     font-weight: 700;
     text-decoration: underline;
@@ -247,8 +247,8 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
     height: calc(100vh - 200px);
     
     flex-grow: 1; /* Allows the grid to grow and fill available space */
@@ -259,7 +259,7 @@ main {
     
     font-family: Editor, Georgia, Times New Roman, Times, serif;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 18px;
 }
 
 .gallery-1 {
@@ -294,13 +294,13 @@ main {
 .text-name {
     font-family: Degular;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 18px;
 }
 
 .interview-text {
     font-family: Degular;
     font-weight: 400;
-    font-size: 1.2em;
+    font-size: 18px;
     
     margin-bottom: 20px;
 }

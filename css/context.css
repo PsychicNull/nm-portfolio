@@ -161,7 +161,7 @@ header {
 }
 
 #nav-list li a:hover {
-    color: #adadad; 
+    color: black !important; 
     --underline-width: 0;
     font-weight: 700;
     text-decoration: underline;
