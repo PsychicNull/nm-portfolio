@@ -91,14 +91,20 @@ header {
     font-size: 24px;
     font-weight: 400;
     text-transform: uppercase;
-    display: flex;
-    flex-direction: column; /* Stack first and last name */
+    text-align: justify;
+    text-justify: inter-word;
     line-height: 1.2; /* Adjust line height between first and last name */
+    max-width: 100%; /* Allow full width for justification */
+    display: flex;
+    flex-direction: column;
 }
 
 .title-name a {
     text-decoration: none;
     transition: none;
+    text-align: justify; /* Justify the link text */
+    display: inline-block;
+    width: 100%; /* Ensures full width for text justification */
 }
 
 .title-name a:hover {
@@ -161,7 +167,7 @@ header {
 }
 
 #nav-list li a:hover {
-    color: #adadad; 
+    color: black; 
     --underline-width: 0;
     font-weight: 700;
     text-decoration: underline;
@@ -171,7 +177,7 @@ header {
     color: black !important;
     --underline-width: 0;
     font-weight: 700;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .navigation{
@@ -183,7 +189,7 @@ header {
 
 /*** Main content ***/
 main {
-    height: calc(100vh - 160px); /* Adjust 100px based on the height of your header/footer */
+    height: calc(100vh - 130px); /* Adjust 100px based on the height of your header/footer */
     overflow: hidden; /* This will handle any overflowing content */
 }
 
@@ -206,14 +212,232 @@ main {
 .parent-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 0;
     height: 100%;
+
+    padding: 20px;
     
     flex-grow: 1; /* Allows the grid to grow and fill available space */
 } 
 
+.tab-master{
+    grid-area: 1 / 1 / 1 / 4;
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    border-bottom: 1px solid black;
+    z-index: 2; /* Ensure tab-master is above tab-content */
+}
+
+#tab-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#tab-list li {
+    text-align: center;
+    margin: 0 .5rem;
+    border-top: 1px solid #adadad;
+    border-left: 1px solid #adadad;
+    border-right: 1px solid #adadad;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+
+    width: 200px;
+    height: 50px; /* Set a fixed height for uniformity */
+    overflow: hidden;
+    white-space: nowrap;
+    background: white;
+}
+
+#tab-list li.active {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#tab-list li a {
+    position: relative;
+    display: inline-block;
+    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-size: 18px;
+    font-weight: 400; /* Normal font weight */
+    color: #adadad;
+    text-decoration: none;
+}
+
+/* Gradient for the right side */
+#tab-list li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 25px;
+    pointer-events: none;
+    z-index: 2; /* Ensure gradients are on top */
+    right: 0;
+
+    background: linear-gradient(to right, 
+        rgba(255, 255, 255, 0.2), 
+        rgba(255, 255, 255, 0.5), 
+        rgba(255, 255, 255, 1), white);
+}
+
+#tab-list li:hover a {
+    color: black; /* Change text color */
+    --underline-width: 0;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#tab-list li a.active {
+    color: black; /* Change text color */
+    /* text-decoration: underline; */
+    font-weight: 700;
+}
+
+.tab-banner {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioning relative to the parent */
+    background-color: white; /* Background color */
+    padding: 5px 10px; /* Padding for spacing */
+    
+    font-family: Editor, Georgia, Times New Roman, Times, serif; /* Font family */
+    font-size: 10px; /* Font size */
+    font-weight: 500; /* Font weight for normal text */
+    color: black; /* Text color */
+    border: 1px solid #adadad; /* Border styling */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    z-index: 20; /* Ensure it appears above other content */
+    
+    max-width: calc(100vw - 20px); /* Prevent overflow beyond viewport width */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break to the next line */
+    left: 0; /* Reset left to align with the tab */
+}
+
+/* Show banner on hover or when tab is active */
+#tab-list li:hover .tab-banner {
+    display: block;
+}
+
+
+.tab-content {
+    grid-area: 2 / 1 / 4 / 4;
+    position: relative;
+    background-color: white;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    
+    height: 100%; /* Adjust this value based on your layout */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px; /* Optional padding for better spacing */
+    z-index: 1;
+}
+
+.tab-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    grid-template-rows: 1fr 100px;
+    grid-column-gap: 20px;
+    grid-row-gap: 0;
+
+    background-color: white;
+    padding: 20px;
+}
+
+.tab-text {
+    grid-area: 1 / 1 / 4 / 2;
+    background-color: white;
+}
+
+.tab-text b {
+    line-height: normal;
+    padding: 10px 0;
+}
+
+.tab-text p {
+    line-height: normal;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.tab-gallery {
+    grid-area: 1 / 2 / 4 / 4;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 0.6s ease-in-out, border-color 0.3s ease;
+    opacity: 1;
+    border: 1px solid #adadad;
+}
+
+.tab-work-wrapper {
+    width: fit-content; /* Adjust this to fit the content */
+    height: auto; /* Allow it to expand based on content */
+    padding: 0;
+    margin: 0;
+    display: block; /* Block display allows it to take the full width available */
+}
+
+.tab-work-title { 
+    width: fit-content;
+}
+
+.tab-work-title a { 
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    color: black; /* Change text color */
+    --underline-width: 0;
+    text-decoration: none;
+}
+
+.tab-work-title a:hover { 
+    font-weight: 700;
+    text-decoration: underline;
+    color: black; /* Change text color */
+    --underline-width: 0;
+}
+
+
+.tab-image {
+    padding: 10px 0;
+}
+
+.tab-image img {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+p.address {
+    line-height: 1.3em;
+}
+
+/** TBD **/
 .work-list {
     width: fit-content;
     height: auto;
@@ -326,38 +550,6 @@ main {
     font-size: 18px;
     color: #D0D0D0;
 }
-
-.image-frame {
-    grid-area: 1 / 2 / 4 / 4;
-    position: relative;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: #000; /* Fallback background color */
-    overflow: hidden; /* Ensure no overflow */    
-    z-index: 1;
-    
-    background-size: cover; 
-    background-position: center;
-    transition: background-image 0.3s ease-in-out;
-}
-
-.image-eye {
-    position: absolute;
-    width: 95%; /* Adjust width as necessary */
-    height: 95%; /* Adjust height as necessary */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    overflow: hidden;
-    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
-    transition: transform 0.1s ease; /* Faster scaling */
-    z-index: 2; /* Ensure it’s on top of the background */
-}
-
-.image-eye.visible {
-    transform: translate(-50%, -50%) scale(1); /* Scale to full size when visible */
-}
-
 
 /* Footer */
 footer {

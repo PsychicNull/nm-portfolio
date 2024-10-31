@@ -55,15 +55,19 @@ h2 a:visited{
 }
 
 a {
-    background: linear-gradient(currentColor 0 0) 
+    /* background: linear-gradient(currentColor 0 0) 
         bottom left/
         var(--underline-width, 0%) 0.12em
         no-repeat;
-    transition: background-size 0.5s;
+    transition: background-size 0.5s; */
+    color: black;
+    text-decoration: none;
 }
 
 a:hover { 
     --underline-width: 100%;
+    text-decoration: underline;
+    font-weight: 700;
 }
 
 a:visited{
@@ -171,7 +175,6 @@ header {
     color: black !important; 
     --underline-width: 0;
     font-weight: 700;
-    text-decoration: underline;
 }
 
 .navigation{
@@ -200,12 +203,19 @@ header {
 #tab-list li {
     text-align: center;
     margin: 0 15px;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-top: 1px solid #adadad;
+    border-left: 1px solid #adadad;
+    border-right: 1px solid #adadad;
     padding: 10px;
     position: relative;
     display: inline-block;
+}
+
+/* Active tab style: black border when the li contains an active link */
+#tab-list li:has(a.active) {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 /* Set fixed widths for each tab */
@@ -227,7 +237,7 @@ header {
     font-family: Editor, Georgia, Times New Roman, Times, serif;
     font-size: 18px;
     font-weight: 400; /* Normal font weight */
-    color: black;
+    color: #adadad;
     text-decoration: none;
 }
 
@@ -236,12 +246,13 @@ header {
     /* background-size: 100% 100%; */
     --underline-width: 0;
     font-weight: 700;
+    text-decoration: underline;
 }
 
 #tab-list li a.active {
     color: black; /* Change text color */
     /* background-size: 100% 100%; */
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .tab-content {
@@ -257,7 +268,7 @@ header {
     padding: 20px; /* Optional padding for better spacing */
 }
 
-.tab-body-01, .tab-body-02, .tab-body-03 {
+.tab-body {
     position: absolute;
     top: 0;
     left: 0;
@@ -268,19 +279,7 @@ header {
     grid-template-rows: 1fr 100px;
     grid-column-gap: 20px;
     grid-row-gap: 0;
-}
 
-.tab-body-01 {
-    background-color: white;
-    padding: 20px;
-}
-
-.tab-body-02 {
-    background-color: white;
-    padding: 20px;
-}
-
-.tab-body-03 {
     background-color: white;
     padding: 20px;
 }
@@ -288,6 +287,7 @@ header {
 .tab-text {
     grid-area: 1 / 1 / 4 / 2;
     background-color: white;
+    font-size: 16px;
 }
 
 .tab-text b {

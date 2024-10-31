@@ -116,7 +116,7 @@ header {
 }
 
 .bar {
-    position: flex;
+    /* position: flex; */
     width: 100%;
     height: 5px;
 
