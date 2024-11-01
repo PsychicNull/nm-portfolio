@@ -7,14 +7,14 @@ $(document).ready(function () {
         loop: true,
         pagination: {
             el: '.horizontal-swiper .swiper-pagination',
+            clickable: 'true',
+            dynamicBullets: 'true',
+            dynamicMainBullets: 'true',
         },
         navigation: {
             nextEl: '.horizontal-swiper .swiper-button-next',
             prevEl: '.horizontal-swiper .swiper-button-prev',
         },
-        //scrollbar: {
-        //    el: '.horizontal-swiper .swiper-scrollbar',
-        //},
     });
 
     // Vertical Swiper
@@ -23,14 +23,14 @@ $(document).ready(function () {
         loop: true,
         pagination: {
             el: '.vertical-swiper .swiper-pagination',
+            clickable: 'true',
+            dynamicBullets: 'true',
+            dynamicMainBullets: 'true',
         },
         navigation: {
             nextEl: '.vertical-swiper .swiper-button-next',
             prevEl: '.vertical-swiper .swiper-button-prev',
         },
-/*        scrollbar: {
-            el: '.vertical-swiper .swiper-scrollbar',
-        },*/
     });
     
     // Initialize Fancybox (optional)

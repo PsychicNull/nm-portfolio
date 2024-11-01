@@ -93,18 +93,20 @@ header {
     text-transform: uppercase;
     text-align: justify;
     text-justify: inter-word;
-    line-height: 1.2; /* Adjust line height between first and last name */
-    max-width: 100%; /* Allow full width for justification */
-    display: flex;
-    flex-direction: column;
+    line-height: 1.2;
+    max-width: 100%;
+}
+
+.title-name .first-line {
+    letter-spacing: 0.05em; /* Adjust character spacing only for the first line */
 }
 
 .title-name a {
     text-decoration: none;
     transition: none;
-    text-align: justify; /* Justify the link text */
+    text-align: justify;
     display: inline-block;
-    width: 100%; /* Ensures full width for text justification */
+    width: 100%;
 }
 
 .title-name a:hover {
