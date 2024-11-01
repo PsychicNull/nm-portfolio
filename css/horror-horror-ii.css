@@ -300,7 +300,7 @@ main {
 
 .work-container-2 {
     grid-column: 1; /* First column */
-    width: 600px;
+    width: 900px;
     text-align: justify;
 }
 .gallery-2 {

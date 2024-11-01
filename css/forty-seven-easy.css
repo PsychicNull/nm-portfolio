@@ -1,4 +1,4 @@
-/*** CSS FOR HORROR HORROR SERIES ***/
+/*** CSS FOR FORTY-SEVEN EASY POUNDCAKES LIKE GRANDMA USED TO MAKE ***/
 
 /* Ensure full page expansion */
 html, body {
@@ -300,7 +300,7 @@ main {
 
 .work-container-2 {
     grid-column: 1; /* First column */
-    width: 600px;
+    width: 900px;
     text-align: justify;
 }
 .gallery-2 {
@@ -363,6 +363,15 @@ main {
     font-family: Degular;
     font-weight: 700;
     font-size: 18px;
+}
+
+.interview-name {
+    font-family: Degular;
+    font-weight: 700;
+    font-size: 18px;
+    
+    margin-top: 5px; 
+    margin-bottom: 5px; 
 }
 
 .interview-text {

@@ -1,0 +1,136 @@
+/** SWIPER CSS FOR THE FLOWER, No. 3 **/
+
+.swiper {
+    margin: 0 !important;
+}
+
+:root {
+    --swiper-navigation-sides-offset: 0; /* Remove offset */
+}
+
+/* Horizontal Swiper */
+.horizontal-swiper {
+    width: 900px;
+    height: 600px;
+    border: 1px solid #adadad;
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+.horizontal-swiper:hover {
+    border-color: black; /* Only change the color */
+}
+
+.horizontal-swiper .swiper-slide {
+    background-color: white;
+    position: relative;       /* Enable absolute positioning inside */
+    overflow: hidden;         /* Hide any overflow */
+}
+
+.horizontal-swiper .swiper-slide img {
+    position: absolute;       /* Use absolute positioning for centering */
+    top: 50%;                 /* Move to center vertically */
+    left: 50%;                /* Move to center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning to perfectly center */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;      /* Maintain aspect ratio */
+    cursor: crosshair;
+}
+
+/* Horizontal Swiper Arrows */
+.horizontal-swiper .swiper-button-prev,
+.horizontal-swiper .swiper-button-next {
+    color: black; 
+    height: 100%; /* Make the arrow's clickable area span the full height */
+    top: 0;       /* Align the arrow at the top */
+    bottom: 0;    /* Align the arrow at the bottom */
+    width: 50px;  /* Ensure the width adjusts properly */
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in and fade-out */
+}
+
+/* Custom Arrow Styles */
+.horizontal-swiper .swiper-button-prev::after,
+.horizontal-swiper .swiper-button-next::after {
+    font-size: 20px; /* Set arrow size */
+}
+
+/* Show arrows on hover */
+.horizontal-swiper:hover .swiper-button-prev,
+.horizontal-swiper:hover .swiper-button-next {
+    opacity: 1; /* Show on hover */
+}
+
+/* Vertical Swiper */
+.vertical-swiper {
+    width: 450px;
+    height: 600px;
+    border: 1px solid #adadad;
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+.vertical-swiper:hover {
+    border-color: black; /* Only change the color */
+}
+
+.vertical-swiper .swiper-slide {
+    background-color: white;
+}
+
+.vertical-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: crosshair;
+}
+
+/* Vertical Swiper Arrows */
+.vertical-swiper .swiper-button-prev,
+.vertical-swiper .swiper-button-next {
+    color: black;
+    height: 100%; /* Make the arrow's clickable area span the full height */
+    top: 0;       /* Align the arrow at the top */
+    bottom: 0;    /* Align the arrow at the bottom */
+    width: 50px;  /* Ensure the width adjusts properly */
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in and fade-out */
+}
+
+/* Custom Arrow Styles */
+.vertical-swiper .swiper-button-prev::after,
+.vertical-swiper .swiper-button-next::after {
+    font-size: 20px; /* Set arrow size */
+}
+
+/* Show arrows on hover */
+.vertical-swiper:hover .swiper-button-prev,
+.vertical-swiper:hover .swiper-button-next {
+    opacity: 1; /* Show on hover */
+}
+
+/* Hide scrollbar */
+.horizontal-swiper .swiper-scrollbar,
+.vertical-swiper .swiper-scrollbar {
+    display: none; 
+}
+
+/* Hide pagination by default */
+.swiper-pagination {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Show pagination on hover */
+.swiper:hover .swiper-pagination {
+    opacity: 1;
+}
+
+/* Style the active pagination bullet */
+.swiper-pagination-bullet-active {
+    background-color: #000 !important;
+}
+
+

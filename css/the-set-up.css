@@ -1,4 +1,4 @@
-/*** CSS FOR HORROR HORROR SERIES ***/
+/*** CSS FOR A PRIEST, A RABBI AND A MINISTER WALK INTO A BAR ***/
 
 /* Ensure full page expansion */
 html, body {
@@ -243,7 +243,7 @@ main {
 .parent-grid {
     display: grid;
     grid-template-columns: repeat(2, auto); /* Two columns */
-    grid-template-rows: repeat(5, auto); /* Three rows */
+    grid-template-rows: repeat(3, auto); /* Three rows */
     grid-column-gap: 20px; /* Space between columns */
     grid-row-gap: 20px; /* Space between rows */
     padding: 20px;
@@ -315,32 +315,6 @@ main {
     grid-column: 1; /* First column */
 }
 .work-container-3 {
-    grid-column: 2; /* Second column */
-    width: 600px;
-    text-align: justify;
-}
-
-/* Fourth row: image then text */
-.content-grid-wrapper:nth-of-type(4) {
-    grid-column: 1 / -1;
-}
-.gallery-4 {
-    grid-column: 2; /* First column */
-}
-.work-container-4 {
-    grid-column: 1; /* Second column */
-    width: 600px;
-    text-align: justify;
-}
-
-/* Fifth row: image then text */
-.content-grid-wrapper:nth-of-type(5) {
-    grid-column: 1 / -1;
-}
-.gallery-5 {
-    grid-column: 1; /* First column */
-}
-.work-container-5 {
     grid-column: 2; /* Second column */
     width: 600px;
     text-align: justify;
