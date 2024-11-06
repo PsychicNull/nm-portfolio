@@ -1,0 +1,107 @@
+@media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    /* Show the hamburger menu */
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu */
+        position: fixed; /* Fixed position */
+        top: 25px; /* Adjust as needed for vertical alignment */
+        right: 29px; /* Adjust as needed for horizontal alignment */
+        z-index: 1000; /* Ensure it's above other content */
+        cursor: pointer;
+        background-color: transparent !important;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 25px; /* Width of the bar */
+        height: 3px; /* Height of the bar */
+        margin: 5px 0; /* Space between bars */
+        background-color: #000; /* Color of the bar */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Hide regular navigation on mobile */
+    .navigation {
+        display: none; /* Hide the regular desktop navigation */
+    }
+
+    /* Mobile navigation menu initially hidden */
+    .navigation-mobile {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 900;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+        max-height: 0; /* Initially collapsed */
+        opacity: 0; /* Initially invisible */
+        visibility: hidden; /* Hidden but takes up space */
+        transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+        border-top: 1px solid black;
+    }
+
+    /* Show mobile menu when active */
+    .navigation-mobile.active {
+        max-height: calc(100vh - 120px); /* Full height */
+        opacity: 1; /* Fully visible */
+        visibility: visible; /* Visible */
+    }
+
+    .navigation-mobile #nav-list-mobile ul {
+        padding-left: 20px; /* Indent nested submenus */
+        list-style-type: none; 
+    }
+
+    /* Styles for the navigation list */
+    #nav-list-mobile {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        align-items: flex-start;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 10px;
+    }
+
+    #nav-list-mobile li {
+        margin: 0;
+        padding: 3px;
+        text-align: left;
+    }
+
+    #nav-list-mobile li a {
+        color: #D0D0D0;
+        text-decoration: none;
+        font-family: Editor;
+        font-size: 14px;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    #nav-list-mobile li a:hover {
+        color: black;
+        text-decoration: underline;
+        --underline-width: 0;
+    }
+}

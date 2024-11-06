@@ -7,8 +7,9 @@ $(document).ready(function() {
     $('.hamburger-menu').on('click touchstart', function(e) {
         e.preventDefault(); // Prevent default action (useful if it's an anchor tag)
         $(this).toggleClass('active'); // Toggle the 'active' class for the hamburger menu
-        $('.navigation').toggleClass('active'); // Toggle the 'active' class for the sidebar
-        $('#nav-list').toggleClass('active'); // Toggle the 'active' class for the sidebar
 
+        // Toggle mobile navigation visibility
+        $('.navigation-mobile').toggleClass('active');  
+        $('#nav-list-mobile').toggleClass('active'); 
     });
 });

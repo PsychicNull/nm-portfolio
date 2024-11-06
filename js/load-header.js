@@ -5,15 +5,16 @@ $(document).ready(function() {
     function loadHeader() {
         const pathToHeader = window.location.pathname === '/index.html' ? 'html/header.html' : 'header.html';
 
+        // Load header dynamically
         $("#header-placeholder").load(pathToHeader, function() {
-            applyCustomCursor();
-            checkScreenSize();
-            toggleMobileMenu();
+            applyCustomCursor(); // Apply custom cursor after header is loaded
+            checkScreenSize(); // Adjust the layout based on the screen size
+            toggleMobileMenu(); // Ensure mobile menu works after loading
 
             // Set the active class after the header is loaded
             const currentUrl = window.location.pathname;
             console.log('Current URL:', currentUrl);
-            setActiveClass(currentUrl);
+            setActiveClass(currentUrl); // Set active class for the current page
         });
     }
 
@@ -25,12 +26,13 @@ $(document).ready(function() {
         const isInSubfolder = window.location.pathname.includes('/html/');
         const cursorPath = isInSubfolder ? '../img/cursor/cursor_glove.png' : 'img/cursor/cursor_glove.png';
         
+        // Apply custom cursor when hovering over specified elements
         $('a, .dropdown-toggle, .hamburger-menu').hover(
             function() {
                 $(this).css('cursor', `url(${cursorPath}), auto`);
             }, 
             function() {
-                $(this).css('cursor', 'auto'); // Reset to default
+                $(this).css('cursor', 'auto');
             }
         );
 
@@ -39,7 +41,7 @@ $(document).ready(function() {
                 $(this).css('cursor', `url(${cursorPath}), auto`);
             }, 
             function() {
-                $(this).css('cursor', 'auto'); // Reset to default
+                $(this).css('cursor', 'auto');
             }
         );
     }
@@ -48,11 +50,13 @@ $(document).ready(function() {
     function toggleMobileMenu() {
         const navList = $('#nav-list');
         const hamburgerMenu = $('.hamburger-menu');
-
+        const navigationMobile = $('.navigation-mobile');
+        
+        // Toggle mobile menu on hamburger click
         hamburgerMenu.on('click', function () {
             $(this).toggleClass('active'); // Toggle hamburger menu animation
-            navList.toggleClass('active'); // Toggle mobile navigation visibility
-            $('.navigation').toggleClass('active'); // Additional mobile nav toggle
+            navigationMobile.toggleClass('active'); // Toggle mobile nav visibility
+            navList.toggleClass('active'); // Toggle mobile menu items visibility
         });
     }
 
@@ -60,19 +64,22 @@ $(document).ready(function() {
     function checkScreenSize() {
         const isMobile = window.matchMedia('(max-width: 768px)').matches;
         const navList = $('#nav-list');
-
+        const navigationMobile = $('.navigation-mobile');
+        
         if (isMobile) {
-            // Show hamburger, hide desktop menu
+            // On mobile: show hamburger, hide desktop menu
             $('.hamburger-menu').show();
-            navList.removeClass('active'); // Ensure desktop menu isn't shown
+            navList.removeClass('active'); // Hide desktop menu
+            navigationMobile.removeClass('active'); // Hide mobile menu by default
         } else {
-            // Hide hamburger, show desktop menu
+            // On desktop: hide hamburger, show desktop menu
             $('.hamburger-menu').hide();
-            navList.addClass('active'); // Make sure desktop menu is visible
-            $('.navigation').removeClass('active'); // Ensure mobile-specific classes are removed
+            navList.addClass('active'); // Show desktop menu
+            navigationMobile.removeClass('active'); // Hide mobile menu
         }
     }
 
     // Recheck screen size when the window is resized
     $(window).on('resize', checkScreenSize);
+
 });

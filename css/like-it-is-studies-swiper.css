@@ -134,3 +134,34 @@
 }
 
 
+@media (max-width: 768px) {
+    .vertical-swiper {
+        width: 700px;
+        height: auto;
+        border: 1px solid #adadad;
+        transition: border-color 0.3s ease; /* Smooth transition */
+    }
+
+    .horizontal-swiper {
+        width: 700px;
+        height: 400px;
+        border: 1px solid #adadad;
+        transition: border-color 0.3s ease; /* Smooth transition */
+    }
+}
+
+@media (max-width: 450px) {
+    .vertical-swiper {
+        width: 400px;
+        height: auto;
+        border: 1px solid #adadad;
+        transition: border-color 0.3s ease; /* Smooth transition */
+    }
+
+    .horizontal-swiper {
+        width: 405px;
+        height: 250px;
+        border: 1px solid #adadad;
+        transition: border-color 0.3s ease; /* Smooth transition */
+    }
+}

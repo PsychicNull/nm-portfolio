@@ -590,3 +590,9 @@ footer {
     font-family: 'Degular';
     src: url('../fonts/degular-variable/DegularVariable.ttf');
 }
+
+@media (min-width: 769px) {
+    .navigation-mobile {
+        display: none;
+    }
+}

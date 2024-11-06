@@ -1,4 +1,5 @@
 /*** GLOBALS ***/
+
 /* Ensure full page expansion */
 html, body {
     min-height: 100vh; /* Ensure body is at least the height of the viewport */
@@ -654,4 +655,10 @@ footer {
 @font-face {
     font-family: 'LoraItalic';
     src: url('fonts/lora/Lora-Italic-VariableFont_wght.ttf');
+}
+
+@media (min-width: 769px) {
+    .navigation-mobile {
+        display: none;
+    }
 }
