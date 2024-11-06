@@ -84,6 +84,12 @@
         padding: 10px 10px;
     }
 
+    #nav-list-mobile ul {
+        margin: 0;
+        padding: 5px;
+        text-align: left;
+    }
+
     #nav-list-mobile li {
         margin: 0;
         padding: 3px;
