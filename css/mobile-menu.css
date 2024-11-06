@@ -1,8 +1,4 @@
 @media (max-width: 768px) {
-    header {
-        position: relative;
-    }
-
     /* Show the hamburger menu */
     .hamburger-menu {
         display: block; /* Show the hamburger menu */

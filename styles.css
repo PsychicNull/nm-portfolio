@@ -135,6 +135,12 @@ header {
 
 
 /* Navigation Menu (Desktop) */
+.navigation{
+    background-color: transparent;
+    position: relative;
+    top: 16px;
+}
+
 #nav-list {
     list-style: none;
     display: flex;
@@ -181,12 +187,6 @@ header {
     --underline-width: 0;
     font-weight: 700;
     /* text-decoration: underline; */
-}
-
-.navigation{
-    background-color: transparent;
-    position: relative;
-    top: 16px;
 }
 
 

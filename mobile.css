@@ -88,14 +88,6 @@
         text-align: justify;
     }
 
-    .dropdown-toggle {
-        font-size: 20px;
-    }
-    
-    #projects a {
-        font-size: 16px;
-    }
-
     #tab-list li a {
         position: relative;
         display: inline-block;
