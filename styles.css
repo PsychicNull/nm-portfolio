@@ -61,10 +61,12 @@ a {
         var(--underline-width, 0%) 0.12em
         no-repeat;
     transition: background-size 0.5s;
+    color: black;
 }
 
 a:hover { 
     --underline-width: 100%;
+    color: black;
 }
 
 a:visited{
