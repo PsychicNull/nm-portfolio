@@ -175,15 +175,15 @@
 
 @media (max-width: 768px) {
     .vertical-swiper {
-        width: 405px;
+        max-width: 325px;
         height: auto;
         border: 1px solid #adadad;
         transition: border-color 0.3s ease; /* Smooth transition */
     }
 
     .horizontal-swiper {
-        width: 405px;
-        height: 400px;
+        max-width: 325px;
+        max-height: 225px;
         border: 1px solid #adadad;
         transition: border-color 0.3s ease; /* Smooth transition */
     }
@@ -191,15 +191,15 @@
 
 @media (max-width: 450px) {
     .vertical-swiper {
-        width: 400px;
+        max-width: 325px;
         height: auto;
         border: 1px solid #adadad;
         transition: border-color 0.3s ease; /* Smooth transition */
     }
 
     .horizontal-swiper {
-        width: 405px;
-        height: 400px;
+        max-width: 325px;
+        max-height: 225px;
         border: 1px solid #adadad;
         transition: border-color 0.3s ease; /* Smooth transition */
     }
