@@ -8,8 +8,7 @@ $(document).ready(function () {
         pagination: {
             el: '.horizontal-swiper .swiper-pagination',
             clickable: 'true',
-            dynamicBullets: 'true',
-            dynamicMainBullets: 'true',
+            type: "fraction",
         },
         navigation: {
             nextEl: '.horizontal-swiper .swiper-button-next',
@@ -24,8 +23,7 @@ $(document).ready(function () {
         pagination: {
             el: '.vertical-swiper .swiper-pagination',
             clickable: 'true',
-            dynamicBullets: 'true',
-            dynamicMainBullets: 'true',
+            type: "fraction",
         },
         navigation: {
             nextEl: '.vertical-swiper .swiper-button-next',
@@ -40,4 +38,5 @@ $(document).ready(function () {
             showOnStart: false,
         },
     });
+    
 });

@@ -56,16 +56,10 @@ h2 a:visited{
 }
 
 a {
-    background: linear-gradient(currentColor 0 0) 
-        bottom left/
-        var(--underline-width, 0%) 0.12em
-        no-repeat;
-    transition: background-size 0.5s;
     color: black;
 }
 
 a:hover { 
-    --underline-width: 100%;
     color: black;
 }
 
@@ -91,7 +85,7 @@ header {
 .title-name {
     color: black !important;
     font-family: Editor, Georgia, Times New Roman, Times, serif;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: justify;
@@ -222,7 +216,7 @@ main {
     grid-row-gap: 0;
     height: 100%;
 
-    padding: 20px;
+    padding: 20px 20px 30px 20px;
     
     flex-grow: 1; /* Allows the grid to grow and fill available space */
 } 
@@ -363,7 +357,7 @@ main {
 }
 
 .tab-text {
-    grid-area: 1 / 1 / 4 / 2;
+    grid-area: 1 / 1 / 2 / 2;
     background-color: white;
 }
 
@@ -376,6 +370,31 @@ main {
     line-height: normal;
     padding: 5px 0;
     font-size: 16px;
+}
+
+.tab-description {
+    grid-area: 2 / 1 / 4 / 2;
+    background-color: white;
+    width: 100%;
+    height: auto;
+
+    padding: 20px;
+    text-align: left;
+}
+
+.tab-description p {
+    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.tab-attribute {
+    font-family: Degular, sans-serif;
+    text-align: justify;
+    font-size: 14px;
+
+    right: 0;
+    padding: 15px 0 20px 100px;
 }
 
 .tab-gallery {
@@ -564,7 +583,7 @@ footer {
     height: auto;
     width: 100%;     /* Make the footer take up the full width */
     text-align: left;
-    font-size: 10px;
+    font-size: 12px;
     color: black;
     z-index: 1000;   /* Ensure it appears above other elements */
     padding: 10px 0 !important;
@@ -587,8 +606,16 @@ footer {
     justify-content: space-around;
     min-width: 100%;
     gap: var(--gap);
-    
-    animation: scroll 10s linear infinite; /* Apply the animation */
+    animation: scroll 10s linear infinite; /* Base animation */
+    animation-play-state: running; /* Default to running */
+}
+
+.marquee a {
+    text-decoration: underline;
+}
+
+.marquee a:hover {
+    font-weight: 700;
 }
 
 @keyframes scroll {

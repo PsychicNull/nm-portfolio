@@ -87,7 +87,7 @@ header {
 .title-name {
     color: black !important;
     font-family: Editor, Georgia, Times New Roman, Times, serif;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: justify;
@@ -350,7 +350,7 @@ main {
     grid-row-gap: 0;
     height: 100%;
 
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     
     flex-grow: 1; /* Allows the grid to grow and fill available space */
 }
@@ -383,7 +383,7 @@ footer {
     height: auto;
     width: 100%;     /* Make the footer take up the full width */
     text-align: left;
-    font-size: 10px;
+    font-size: 12px;
     color: black;
     z-index: 1000;   /* Ensure it appears above other elements */
     padding: 10px 0 !important;
@@ -406,8 +406,16 @@ footer {
     justify-content: space-around;
     min-width: 100%;
     gap: var(--gap);
-    
-    animation: scroll 35s linear infinite; /* Apply the animation */
+    animation: scroll 10s linear infinite; /* Base animation */
+    animation-play-state: running; /* Default to running */
+}
+
+.marquee a {
+    text-decoration: underline;
+}
+
+.marquee a:hover {
+    font-weight: 700;
 }
 
 @keyframes scroll {

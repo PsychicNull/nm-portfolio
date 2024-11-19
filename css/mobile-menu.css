@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+    .title-name {
+        font-size: 24px;
+    }
+
     /* Show the hamburger menu */
     .hamburger-menu {
         display: block; /* Show the hamburger menu */
@@ -55,6 +59,8 @@
         visibility: hidden; /* Hidden but takes up space */
         transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
         border-top: 1px solid black;
+
+        padding-bottom: 50px;
     }
 
     /* Show mobile menu when active */

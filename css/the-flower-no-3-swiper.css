@@ -133,18 +133,56 @@
     background-color: #000 !important;
 }
 
+/* Position pagination to the top-right corner */
+.horizontal-swiper .swiper-pagination,
+.vertical-swiper .swiper-pagination {
+    position: absolute;  
+    pointer-events: none; 
+    color: black;
+    text-align: right;
+    top: 0;
+    right: 0;
+    transform: translate(-10px, 10px);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-size: 10px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent black background */
+    padding: 10px;
+    box-sizing: border-box;
+
+    font-family: Degular, sans-serif;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+}
+
+.swiper:hover .image-caption {
+    opacity: 1;
+}
+
+.swiper-slide {
+    position: relative; /* Ensure the caption positions relative to the slide */
+    overflow: hidden;
+}
 
 @media (max-width: 768px) {
     .vertical-swiper {
-        width: 700px;
+        width: 405px;
         height: auto;
         border: 1px solid #adadad;
         transition: border-color 0.3s ease; /* Smooth transition */
     }
 
     .horizontal-swiper {
-        width: 700px;
-        height: 400px;
+        width: 405px;
+        height: 248px;
         border: 1px solid #adadad;
         transition: border-color 0.3s ease; /* Smooth transition */
     }
