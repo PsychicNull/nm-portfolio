@@ -242,8 +242,8 @@ main {
 
 .parent-grid {
     display: grid;
-    grid-template-columns: repeat(2, auto); /* Two columns */
-    grid-template-rows: repeat(5, auto); /* Three rows */
+    grid-template-columns: repeat(2, auto); 
+    grid-template-rows: repeat(5, auto); 
     grid-column-gap: 20px; /* Space between columns */
     grid-row-gap: 20px; /* Space between rows */
     padding: 20px;
@@ -303,8 +303,9 @@ main {
     width: 900px;
     text-align: justify;
 }
+
 .gallery-2 {
-    grid-column: 2; /* Second column */
+    grid-column: 1; /* Second column */
 }
 
 /* Third row: image then text */
@@ -325,7 +326,7 @@ main {
     grid-column: 1 / -1;
 }
 .gallery-4 {
-    grid-column: 2; /* First column */
+    grid-column: 1; /* First column */
 }
 .work-container-4 {
     grid-column: 1; /* Second column */
@@ -343,6 +344,75 @@ main {
 .work-container-5 {
     grid-column: 2; /* Second column */
     width: 600px;
+    text-align: justify;
+}
+
+.content-grid-wrapper:nth-of-type(6) {
+    grid-column: 1 / -1;
+}
+.gallery-6 {
+    grid-column: 1; /* First column */
+}
+.work-container-6 {
+    grid-column: 2; /* Second column */
+    width: 600px;
+    text-align: justify;
+}
+
+.content-grid-wrapper:nth-of-type(7) {
+    grid-column: 1 / -1;
+}
+.gallery-7 {
+    grid-column: 1; /* First column */
+}
+.work-container-7 {
+    grid-column: 2; /* Second column */
+    width: 600px;
+    text-align: justify;
+}
+
+.content-grid-wrapper:nth-of-type(8) {
+    grid-column: 1 / -1;
+}
+.gallery-8 {
+    grid-column: 1; /* First column */
+}
+.work-container-8 {
+    grid-column: 2; /* Second column */
+    width: 600px;
+    text-align: justify;
+}
+
+.content-grid-wrapper:nth-of-type(9) {
+    grid-column: 1 / -1;
+}
+.gallery-9 {
+    grid-column: 1; /* First column */
+}
+.work-container-9 {
+    grid-column: 2; /* Second column */
+    width: 600px;
+    text-align: justify;
+}
+
+.content-grid-wrapper:nth-of-type(10) {
+    grid-column: 1 / -1;
+}
+.gallery-10 {
+    grid-column: 1; /* First column */
+}
+.work-container-10 {
+    grid-column: 1; 
+    width: 100%;
+    text-align: justify;
+}
+
+.content-grid-wrapper:nth-of-type(11) {
+    grid-column: 1 / -1;
+}
+.work-container-11 {
+    grid-column: 1; 
+    width: 900px;
     text-align: justify;
 }
 

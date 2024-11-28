@@ -1,6 +1,6 @@
 /*eslint-env es6*/
 
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {    
     // Horizontal Swiper
     var horizontalSwiper = new Swiper('.horizontal-swiper', {
         direction: 'horizontal',
