@@ -164,7 +164,7 @@ header {
 #nav-list li a {
     position: relative;
     display: inline-block;
-    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-family: Times New Roman, Times, serif;
     font-size: 18px;
     font-weight: 400; /* Normal font weight */
     color: #adadad;
@@ -263,7 +263,7 @@ main {
 #tab-list li a {
     position: relative;
     display: inline-block;
-    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-family: Times New Roman, Times, serif;
     font-size: 18px;
     font-weight: 400; /* Normal font weight */
     color: #adadad;
@@ -306,7 +306,7 @@ main {
     background-color: white; /* Background color */
     padding: 5px 10px; /* Padding for spacing */
     
-    font-family: Editor, Georgia, Times New Roman, Times, serif; /* Font family */
+    font-family: Times New Roman, Times, serif; /* Font family */
     font-size: 10px; /* Font size */
     font-weight: 500; /* Font weight for normal text */
     color: black; /* Text color */
@@ -383,7 +383,7 @@ main {
 }
 
 .tab-description p {
-    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-family: Times New Roman, Times, serif;
     text-align: justify;
     font-size: 14px;
 }
