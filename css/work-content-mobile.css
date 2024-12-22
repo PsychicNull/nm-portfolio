@@ -32,7 +32,6 @@
         margin-bottom: 20px;
         padding: 0;
         box-sizing: border-box;
-
     }
 
     .work-title {
@@ -40,17 +39,15 @@
         font-weight: 700;
         font-size: 18px;
         font-style: italic;
-        text-align: left;
     }
 
     .work-info {
         font-family: Degular, sans-serif; 
         font-weight: 400;
         font-size: 16px;
-        text-align: left;
     }
 
-    /* .content-grid-wrapper {
+    .content-grid-wrapper {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
@@ -59,11 +56,11 @@
         padding-bottom: 0;
 
         box-sizing: border-box;
-    } */
+    }
 
     /* First row: image then text */
     .gallery-1 {
-        grid-area: 2 / 1 / 3 / 2; 
+        grid-area: 1 / 1 / 2 / 2; 
         width: 100%;
         display: block;
 
@@ -71,7 +68,7 @@
     }
 
     .work-container-1 {
-        grid-area: 3 / 1 / 4 / 2; 
+        grid-area: 2 / 1 / 3 / 2; 
         width: 100%;
         text-align: justify;
         padding:0 0 20px 0;

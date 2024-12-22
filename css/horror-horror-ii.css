@@ -153,7 +153,7 @@ header {
 #nav-list li a {
     position: relative;
     display: inline-block;
-    font-family: Degular, sans-serif;
+    font-family: Editor, Georgia, Times New Roman, Times, serif;
     font-size: 18px;
     font-weight: 400; /* Normal font weight */
     color: #adadad;
@@ -242,11 +242,11 @@ main {
 
 .parent-grid {
     display: grid;
-    grid-template-columns: auto auto; 
-    grid-template-rows: repeat(2, auto); 
-    grid-column-gap: 100px; /* Space between columns */
+    grid-template-columns: repeat(2, auto); /* Two columns */
+    grid-template-rows: repeat(5, auto); /* Three rows */
+    grid-column-gap: 20px; /* Space between columns */
     grid-row-gap: 20px; /* Space between rows */
-    padding: 50px 100px 150px 100px;
+    padding: 20px;
     box-sizing: border-box;
     border: 1px solid black;
     overflow-y: auto; /* Ensure scrolling if needed */
@@ -256,7 +256,7 @@ main {
 
 /* Title spanning full width at the top */
 .work-title-wrapper {
-    grid-column: 1;
+    grid-column: 1 / -1; /* Span across both columns */
     line-height: 1.6;
     margin-bottom: 5px;
 }
@@ -266,27 +266,25 @@ main {
     font-weight: 700;
     font-size: 18px;
     font-style: italic;
-    text-align: right;
 }
 
 .work-info {
     font-family: Degular, sans-serif; 
     font-weight: 400;
     font-size: 16px;
-    text-align: right;
 }
 
-/* .content-grid-wrapper {
+.content-grid-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     grid-column-gap: 20px; 
     width: 100%;
     padding-bottom: 30px;
-} */
+}
 
 /* First row: image then text */
 .gallery-1 {
-    grid-column: 2; /* First column */
+    grid-column: 1; /* First column */
 }
 
 .work-container-1 {
@@ -593,20 +591,6 @@ footer {
     src: url('../fonts/degular-variable/DegularVariable.ttf');
 }
 
-@media (max-width: 1000px) {
-    .parent-grid {
-        width: 100%;
-        border: 1px solid red;
-
-        grid-template-columns: auto auto; 
-        grid-template-rows: repeat(2, auto); 
-        grid-column-gap: 50px; /* Space between columns */
-        grid-row-gap: 20px; /* Space between rows */
-        padding: 50px 50px 150px 50px;
-
-        overflow-y: auto; /* Ensure scrolling if needed */
-    }
-}
 
 @media (min-width: 769px) {
     .navigation-mobile {
