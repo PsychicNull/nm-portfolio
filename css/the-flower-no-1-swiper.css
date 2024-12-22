@@ -182,8 +182,8 @@
     }
 
     .horizontal-swiper {
-        max-width: 325px;
-        max-height: 225px;
+        max-width: 400px;
+        max-height: 400px;
         border: 1px solid #adadad;
         transition: border-color 0.3s ease; /* Smooth transition */
     }
@@ -198,8 +198,8 @@
     }
 
     .horizontal-swiper {
-        max-width: 325px;
-        max-height: 225px;
+        max-width: 380px;
+        max-height: 380px;
         border: 1px solid #adadad;
         transition: border-color 0.3s ease; /* Smooth transition */
     }

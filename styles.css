@@ -164,7 +164,7 @@ header {
 #nav-list li a {
     position: relative;
     display: inline-block;
-    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-family: Degular, sans-serif;
     font-size: 18px;
     font-weight: 400; /* Normal font weight */
     color: #adadad;
@@ -263,7 +263,7 @@ main {
 #tab-list li a {
     position: relative;
     display: inline-block;
-    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-family: Times New Roman, Times, serif;
     font-size: 18px;
     font-weight: 400; /* Normal font weight */
     color: #adadad;
@@ -306,7 +306,7 @@ main {
     background-color: white; /* Background color */
     padding: 5px 10px; /* Padding for spacing */
     
-    font-family: Editor, Georgia, Times New Roman, Times, serif; /* Font family */
+    font-family: Times New Roman, Times, serif; /* Font family */
     font-size: 10px; /* Font size */
     font-weight: 500; /* Font weight for normal text */
     color: black; /* Text color */
@@ -347,13 +347,13 @@ main {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 35% 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 100px;
     grid-column-gap: 20px;
-    grid-row-gap: 0;
+    grid-row-gap: 20px;
 
     background-color: white;
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
 }
 
 .tab-text {
@@ -378,12 +378,12 @@ main {
     width: 100%;
     height: auto;
 
-    padding: 20px;
+    padding: 0;
     text-align: left;
 }
 
 .tab-description p {
-    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-family: Times New Roman, Times, serif;
     text-align: justify;
     font-size: 14px;
 }
@@ -418,15 +418,20 @@ main {
 }
 
 .tab-work-wrapper {
-    width: fit-content; /* Adjust this to fit the content */
+    width: 100%; /* Adjust this to fit the content */
     height: auto; /* Allow it to expand based on content */
     padding: 0;
     margin: 0;
-    display: block; /* Block display allows it to take the full width available */
+    /* display: block; */
+    text-align: right;
 }
 
 .tab-work-title { 
-    width: fit-content;
+    width: auto;
+    display: block;
+    margin: 0; 
+    padding: 0; 
+    text-align: left;
 }
 
 .tab-work-title a { 
@@ -436,6 +441,9 @@ main {
     color: black; /* Change text color */
     --underline-width: 0;
     text-decoration: none;
+
+    display: inline; /* Ensure the link respects alignment */
+    text-align: right; /* Align text inside the link */
 }
 
 .tab-work-title a:hover { 
