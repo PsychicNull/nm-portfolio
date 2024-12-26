@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: '.horizontal-swiper .swiper-button-next',
             prevEl: '.horizontal-swiper .swiper-button-prev',
         },
+        slidesPerView: "auto",
     });
 
     // Vertical Swiper
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: '.vertical-swiper .swiper-button-next',
             prevEl: '.vertical-swiper .swiper-button-prev',
         },
+        slidesPerView: "auto",
     });
     
     // Initialize Fancybox (optional)

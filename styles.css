@@ -348,9 +348,9 @@ main {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 100px;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-template-rows: auto 1fr 100px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
 
     background-color: white;
     padding: 20px 20px 20px 20px;

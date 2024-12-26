@@ -477,13 +477,27 @@ footer {
     bottom: 0;       /* Position it at the bottom of the viewport */
     height: auto;
     width: 100%;     /* Make the footer take up the full width */
-    text-align: left;
+    text-align: center;
     font-size: 10px;
     color: black;
     z-index: 1000;   /* Ensure it appears above other elements */
-    padding: 10px 0 !important;
+    padding: 5px 0 !important;
     border-top: 1px solid black;
     background-color: white;
+}
+
+.previous-page { 
+    font-size: 18px;
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+
+.previous-page a { 
+    text-decoration: none;
+}
+
+.previous-page a:hover { 
+    text-decoration: underline;
 }
 
 /* Marquee styles */
