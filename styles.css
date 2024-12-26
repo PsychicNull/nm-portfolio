@@ -436,7 +436,7 @@ main {
 
 .tab-work-title a { 
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     font-style: italic;
     color: black; /* Change text color */
     --underline-width: 0;
