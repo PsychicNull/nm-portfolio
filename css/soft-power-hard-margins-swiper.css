@@ -10,10 +10,10 @@
 
 /* Horizontal Swiper */
 .horizontal-swiper {
-    width: 900px;
-    height: 600px;
-    /* border: 1px solid #adadad;
-    transition: border-color 0.3s ease;  */
+    width: 90%; /* Take up available width */
+    max-width: 900px; /* Cap at original size */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 900px; /* Cap at original size */
 }
 
 .horizontal-swiper:hover {
@@ -27,10 +27,6 @@
 }
 
 .horizontal-swiper .swiper-slide img {
-    /* position: absolute;     
-    top: 50%;                 
-    left: 50%;                
-    transform: translate(-50%, -50%);  */
     width: auto;
     height: auto;
     max-width: 100%;
@@ -72,14 +68,10 @@
 
 /* Vertical Swiper */
 .vertical-swiper {
-    width: 450px;
-    height: 600px;
-    border: 1px solid #adadad;
-    transition: border-color 0.3s ease;
-}
-
-.vertical-swiper:hover {
-    border-color: black; /* Only change the color */
+    width: 100%; /* Take up full width of the parent */
+    max-width: 450px; /* Cap the maximum width */
+    height: auto; /* Let height adjust automatically */
+    max-height: 700px; /* Cap the maximum height */
 }
 
 .vertical-swiper .swiper-slide {
@@ -87,11 +79,16 @@
 }
 
 .vertical-swiper .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Fill the container width */
+    height: auto; /* Adjust height proportionally */
+    object-fit: contain; /* Maintain the image's aspect ratio */
     cursor: crosshair;
+    border: 1px solid #adadad;
+    transition: border-color 0.3s ease;
+}
+
+.vertical-swiper .swiper-slide img:hover {
+    border-color: black; 
 }
 
 /* Vertical Swiper Arrows */
@@ -182,32 +179,26 @@
 
 @media (max-width: 768px) {
     .vertical-swiper {
-        max-width: 325px;
-        height: auto;
-        /* border: 1px solid #adadad;
-        transition: border-color 0.3s ease; */
+        max-width: 350px; 
+        height: auto; 
     }
 
     .horizontal-swiper {
-        /* max-width: 325px;
-        max-height: 225px; */
-        width: 700px;
+        max-width: 700px;
+        width: 100%;
         height: auto;
     }
 }
 
 @media (max-width: 450px) {
     .vertical-swiper {
-        max-width: 325px;
+        max-width: 400px; 
+        width: 100%;
         height: auto;
-        /* border: 1px solid #adadad;
-        transition: border-color 0.3s ease; */
     }
 
     .horizontal-swiper {
-        max-width: 325px;
-        max-height: 225px;
-        /* border: 1px solid #adadad;
-        transition: border-color 0.3s ease; */
+        max-width: 400px;
+        height: auto;
     }
 }
