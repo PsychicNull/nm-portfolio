@@ -28,7 +28,7 @@
     #tab-list li a {
         position: relative;
         display: inline-block;
-        font-family: Editor, Georgia, Times New Roman, Times, serif;
+        font-family: Times New Roman, Times, serif;
         font-size: 12px;
         font-weight: 400; /* Normal font weight */
         color: #adadad;

@@ -12,12 +12,12 @@
 .horizontal-swiper {
     width: 900px;
     height: 600px;
-    border: 1px solid #adadad;
-    transition: border-color 0.3s ease; /* Smooth transition */
+    /* border: 1px solid #adadad;
+    transition: border-color 0.3s ease;  */
 }
 
 .horizontal-swiper:hover {
-    border-color: black; /* Only change the color */
+    border-color: black;
 }
 
 .horizontal-swiper .swiper-slide {
@@ -27,16 +27,23 @@
 }
 
 .horizontal-swiper .swiper-slide img {
-    position: absolute;       /* Use absolute positioning for centering */
-    top: 50%;                 /* Move to center vertically */
-    left: 50%;                /* Move to center horizontally */
-    transform: translate(-50%, -50%); /* Adjust positioning to perfectly center */
+    /* position: absolute;     
+    top: 50%;                 
+    left: 50%;                
+    transform: translate(-50%, -50%);  */
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;      /* Maintain aspect ratio */
+    object-fit: contain;  
     cursor: crosshair;
+
+    border: 1px solid #adadad;
+    transition: border-color 0.3s ease; 
+}
+
+.horizontal-swiper .swiper-slide img:hover {
+    border-color: black;
 }
 
 /* Horizontal Swiper Arrows */
@@ -68,7 +75,7 @@
     width: 450px;
     height: 600px;
     border: 1px solid #adadad;
-    transition: border-color 0.3s ease; /* Smooth transition */
+    transition: border-color 0.3s ease;
 }
 
 .vertical-swiper:hover {
@@ -177,15 +184,15 @@
     .vertical-swiper {
         max-width: 325px;
         height: auto;
-        border: 1px solid #adadad;
-        transition: border-color 0.3s ease; /* Smooth transition */
+        /* border: 1px solid #adadad;
+        transition: border-color 0.3s ease; */
     }
 
     .horizontal-swiper {
         max-width: 325px;
         max-height: 225px;
-        border: 1px solid #adadad;
-        transition: border-color 0.3s ease; /* Smooth transition */
+        /* border: 1px solid #adadad;
+        transition: border-color 0.3s ease; */
     }
 }
 
@@ -193,14 +200,14 @@
     .vertical-swiper {
         max-width: 325px;
         height: auto;
-        border: 1px solid #adadad;
-        transition: border-color 0.3s ease; /* Smooth transition */
+        /* border: 1px solid #adadad;
+        transition: border-color 0.3s ease; */
     }
 
     .horizontal-swiper {
         max-width: 325px;
         max-height: 225px;
-        border: 1px solid #adadad;
-        transition: border-color 0.3s ease; /* Smooth transition */
+        /* border: 1px solid #adadad;
+        transition: border-color 0.3s ease; */
     }
 }

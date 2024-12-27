@@ -166,23 +166,23 @@ header {
     display: inline-block;
     font-family: Degular, sans-serif;
     font-size: 18px;
-    font-weight: 400; /* Normal font weight */
+    font-weight: 400;
     color: #adadad;
     text-decoration: none;
+    font-style: italic;
 }
 
 #nav-list li a:hover {
     color: black; 
     --underline-width: 0;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: underline;
 }
 
 #nav-list li a.active {
     color: black !important;
     --underline-width: 0;
-    font-weight: 700;
-    /* text-decoration: underline; */
+    font-weight: 600;
 }
 
 
@@ -263,7 +263,7 @@ main {
 #tab-list li a {
     position: relative;
     display: inline-block;
-    font-family: Times New Roman, Times, serif;
+    font-family: Degular, sans-serif;
     font-size: 18px;
     font-weight: 400; /* Normal font weight */
     color: #adadad;
@@ -290,14 +290,14 @@ main {
 #tab-list li:hover a {
     color: black; /* Change text color */
     --underline-width: 0;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: underline;
 }
 
 #tab-list li a.active {
     color: black; /* Change text color */
     /* text-decoration: underline; */
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .tab-banner {
@@ -348,9 +348,9 @@ main {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr 100px;
+    grid-template-rows: 1fr 1fr;
     grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-auto-rows: auto;
 
     background-color: white;
     padding: 20px 20px 20px 20px;
@@ -373,28 +373,30 @@ main {
 }
 
 .tab-description {
-    grid-area: 2 / 1 / 4 / 2;
+    grid-area: 2 / 1 / 3 / 2;
     background-color: white;
     width: 100%;
     height: auto;
 
     padding: 0;
     text-align: left;
+    position: absolute;
+    bottom: 0;
 }
 
 .tab-description p {
     font-family: Times New Roman, Times, serif;
     text-align: justify;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .tab-attribute {
     font-family: Degular, sans-serif;
     text-align: right;
-    font-size: 14px;
+    font-size: 16px;
 
     right: 0;
-    padding: 15px 0 20px 100px;
+    padding: 15px 0 0 100px;
 }
 
 .tab-gallery {
@@ -447,7 +449,7 @@ main {
 }
 
 .tab-work-title a:hover { 
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: underline;
     color: black; /* Change text color */
     --underline-width: 0;

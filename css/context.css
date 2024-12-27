@@ -166,19 +166,20 @@ header {
     font-weight: 400; /* Normal font weight */
     color: #adadad;
     text-decoration: none;
+    font-style: italic;
 }
 
 #nav-list li a:hover {
     color: black !important; 
     --underline-width: 0;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: underline;
 }
 
 #nav-list li a.active {
     color: black !important; 
     --underline-width: 0;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .navigation{
@@ -238,7 +239,7 @@ header {
 #tab-list li a {
     position: relative;
     display: inline-block;
-    font-family: Editor, Georgia, Times New Roman, Times, serif;
+    font-family: Degular, sans-serif;
     font-size: 18px;
     font-weight: 400; /* Normal font weight */
     color: #adadad;
@@ -249,14 +250,13 @@ header {
     color: black; /* Change text color */
     /* background-size: 100% 100%; */
     --underline-width: 0;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: underline;
 }
 
 #tab-list li a.active {
     color: black; /* Change text color */
-    /* background-size: 100% 100%; */
-    /* text-decoration: underline; */
+    font-weight: 600;
 }
 
 .tab-content {
