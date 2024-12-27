@@ -297,6 +297,18 @@ main {
 
 
 
+.gallery-doubles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    background-color: aquamarine;
+}
+
+.gallery-doubles-content {
+    grid-auto-rows: auto;
+}
+
+
+
 .spacer {
     height: 100px;
     width: auto;
@@ -593,6 +605,13 @@ footer {
         padding: 10px;
     } 
     
+    .card-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    
+        padding: 20px 0 20px 0;
+    }
 
     .work-title-wrapper {
         grid-area: 1 / 1 / 2 / 2;
@@ -619,27 +638,12 @@ footer {
         text-align: left;
     }
 
-    .gallery-1 {
+    .gallery {
         grid-area: 2 / 1 / 3 / 2; 
         width: 100%;
         display: block;
         padding:0 0 20px 0;
     }
-
-    .gallery-2 {
-        grid-area: 3 / 1 / 4 / 2; 
-        width: 100%;
-        display: block;
-        padding:0 0 20px 0;
-    }
-
-    .gallery-3 {
-        grid-area: 4 / 1 / 5 / 2; 
-        width: 100%;
-        display: block;
-        padding:0 0 20px 0;
-    }
-
 
     #tab-list li a {
         position: relative;
