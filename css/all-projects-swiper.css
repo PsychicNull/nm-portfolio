@@ -1,4 +1,4 @@
-/** SWIPER CSS FOR HORROR HORROR I SWIPER **/
+/** SWIPER CSS FOR ALL PROJECTS **/
 
 .swiper {
     margin: 0 !important;
@@ -10,14 +10,14 @@
 
 /* Horizontal Swiper */
 .horizontal-swiper {
-    width: 600px;
-    height: 400px;
-    border: 1px solid #adadad;
-    transition: border-color 0.3s ease; /* Smooth transition */
+    width: 100%; /* Take up available width */
+    max-width: 900px; /* Cap at original size */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 900px; /* Cap at original size */
 }
 
 .horizontal-swiper:hover {
-    border-color: black; /* Only change the color */
+    border-color: black;
 }
 
 .horizontal-swiper .swiper-slide {
@@ -27,16 +27,19 @@
 }
 
 .horizontal-swiper .swiper-slide img {
-    position: absolute;       /* Use absolute positioning for centering */
-    top: 50%;                 /* Move to center vertically */
-    left: 50%;                /* Move to center horizontally */
-    transform: translate(-50%, -50%); /* Adjust positioning to perfectly center */
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;      /* Maintain aspect ratio */
+    object-fit: contain;  
     cursor: crosshair;
+
+    border: 1px solid #adadad;
+    transition: border-color 0.3s ease; 
+}
+
+.horizontal-swiper .swiper-slide img:hover {
+    border-color: black;
 }
 
 /* Horizontal Swiper Arrows */
@@ -65,14 +68,10 @@
 
 /* Vertical Swiper */
 .vertical-swiper {
-    width: 317px;
-    height: 600px;
-    border: 1px solid #adadad;
-    transition: border-color 0.3s ease; /* Smooth transition */
-}
-
-.vertical-swiper:hover {
-    border-color: black; /* Only change the color */
+    width: 100%; /* Take up full width of the parent */
+    max-width: 450px; /* Cap the maximum width */
+    height: auto; /* Let height adjust automatically */
+    max-height: 900px; /* Cap the maximum height */
 }
 
 .vertical-swiper .swiper-slide {
@@ -80,11 +79,16 @@
 }
 
 .vertical-swiper .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    width: 100%; /* Fill the container width */
+    height: auto; /* Adjust height proportionally */
+    object-fit: contain; /* Maintain the image's aspect ratio */
     cursor: crosshair;
+    border: 1px solid #adadad;
+    transition: border-color 0.3s ease;
+}
+
+.vertical-swiper .swiper-slide img:hover {
+    border-color: black; 
 }
 
 /* Vertical Swiper Arrows */
@@ -172,34 +176,29 @@
     overflow: hidden;
 }
 
+
 @media (max-width: 768px) {
     .vertical-swiper {
-        max-width: 325px;
-        height: auto;
-        border: 1px solid #adadad;
-        transition: border-color 0.3s ease; /* Smooth transition */
+        max-width: 350px; 
+        height: auto; 
     }
 
     .horizontal-swiper {
-        max-width: 325px;
-        max-height: 225px;
-        border: 1px solid #adadad;
-        transition: border-color 0.3s ease; /* Smooth transition */
+        max-width: 700px;
+        width: 100%;
+        height: auto;
     }
 }
 
 @media (max-width: 450px) {
     .vertical-swiper {
-        max-width: 325px;
+        max-width: 400px; 
+        width: 100%;
         height: auto;
-        border: 1px solid #adadad;
-        transition: border-color 0.3s ease; /* Smooth transition */
     }
 
     .horizontal-swiper {
-        max-width: 325px;
-        max-height: 225px;
-        border: 1px solid #adadad;
-        transition: border-color 0.3s ease; /* Smooth transition */
+        max-width: 400px;
+        height: auto;
     }
 }
