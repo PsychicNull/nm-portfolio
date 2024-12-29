@@ -574,7 +574,7 @@ footer {
 }
 
 /* MOBILE QUERIES */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     *,
     *::before,
     *::after {
@@ -603,6 +603,10 @@ footer {
         grid-template-columns: 1fr 1.5% 1fr;
         grid-template-rows: repeat(4, auto);
         padding: 25px 0;
+    }
+
+    .card-wrapper:first-of-type {
+        padding-top: 0;
     }
 
     .work-title-wrapper {
@@ -713,6 +717,12 @@ footer {
         margin-bottom: 20px;
     }
 
+}
+
+@media (max-width: 450px) {
+    .work-info {
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 768px) {
