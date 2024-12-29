@@ -11,7 +11,7 @@
 /* Horizontal Swiper */
 .horizontal-swiper {
     width: 100%; /* Take up available width */
-    max-width: 900px; /* Cap at original size */
+    max-width: 1500px; /* Cap at original size */
     height: auto; /* Maintain aspect ratio */
     max-height: 900px; /* Cap at original size */
 }
@@ -69,7 +69,7 @@
 /* Vertical Swiper */
 .vertical-swiper {
     width: 100%; /* Take up full width of the parent */
-    max-width: 450px; /* Cap the maximum width */
+    max-width: 750px; /* Cap the maximum width */
     height: auto; /* Let height adjust automatically */
     max-height: 900px; /* Cap the maximum height */
 }
